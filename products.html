@@ -13,40 +13,29 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif; color: white;}
 body, html {
   height: 100%;
   line-height: 1.8;
-  background-color: rgb(81, 102, 120);
+  background-color: black;
+}
+
+
+block {
+  width: 18px;
+  height: 72px;
+  padding: 10px;
+  border: 5px solid rgba(67, 162, 214, 0.811);
+  margin: 0;
 }
 
 /* Full height image header */
 .bgimg-1 {
   background-position: center;
   background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .2)), url("images2/prices.avif.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .2)), url("images2/background.jpg");
   min-height: 100%;
   
 }
 
 .w3-bar .w3-button {
   padding: 16px;
-  justify-content: center;
-  
-
-}
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  
-}
-
-td, th {
-  border: 3px solid #000000;
-  text-align: center;
-  padding: 8px;
-  
-}
-
-tr:nth-child(even) {
-  background-color: rgb(100, 149, 177);
 }
 </style>
 </head>
@@ -75,8 +64,8 @@ tr:nth-child(even) {
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
   <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
   <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
@@ -84,16 +73,31 @@ tr:nth-child(even) {
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-top-left w3-blue-white" style="padding:70px"  >
-    <span class="w3-jumbo w3-hide-small" style="font-weight:bold; color:rgb(255, 255, 255)">Refurbish Tech & Save Money</span><br>
-    <div class="w3-display-middle-center w3-blue-white" style="padding:10px"  ></div>
-    <span class="w3-large w3-hide-large w3-hide-medium" style="color:rgb(255, 255, 255)">Affordable Solutions Avaible</span><br>
-    <div class="w3-display-center w3-blue-white" style="padding:70px"  ></div>
-    <span  style="font-size:40px; font-weight: bolder; margin-top: auto; color:rgb(255, 255, 255)">Affordable Solutions Available</span>
-    <div class="w3-display-bottom-left w3-blue-white" style="padding:70px"  ></div>
-    <p><a href="index.html" class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-white w3-hover-opacity-off">Home</a></p>
-    <p><a href="services.html" class="w3-button w3-black w3-padding-large w3-large w3-display-bottom-center  w3-white w3-hover-opacity-off">Services</a></p>
-  </div> 
+  <div class="w3-display-middle-right w3-blue-white" style="padding:75px"  >
+    <span class="w3-hide-small" style="font-size:75px; font-weight:bold; color:rgb(255, 255, 255); padding: 90px;">Refurbished Products</span><br>
+    
+    
+   <div class="w3-container" style="padding:115px 15px" id="about">
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-quarter">
+      <img src="images2/phones.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Phone Repairs">
+       <p>Refurbished Phones</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="images2/tablets.webp" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Ram Upgrades PC & Laptops">
+       <p>Refurbished Tablets</p>   
+    </div>
+    <div class="w3-quarter">
+      <img src="images2/laptops.webp" style="width:100%; height: auto" onclick="onClick(this)" class="w3-hover-opacity" alt="Laptop Repairs">
+         <p>Refurbished Laptops</p>
+    </div>
+    <div class="w3-quarter">
+         <a href=""></a>
+      <img src="images2/consoles1.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Laptop Repairs">
+            <p>Refurbished Consoles</p>
+    </div>
+    
+
   <div class="w3-display-bottomleft w3-text-white w3-large" style="padding:24px 48px" size:30px> 
     <i class="fa fa-facebook-official w3-hover-opacity"size:20px></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -104,100 +108,90 @@ tr:nth-child(even) {
   </div>
 </header>
 
-<!-- Pricing Section -->
- <div style="padding:70px"  >
 
-<h2 class="w3-center">Available Services</h2>
 
-<table>
-  <tr>
-    <th style="font-weight: bold; font-size: 20px;">Service</th>
-    <th style="font-weight: bold; font-size: 20px;"> Our Fees</th>
-    
-  </tr>
-  <tr>
-    <td>Phone Repair</td>
-    <td>$50 - 300</td>
-    
-  </tr>
-  <tr>
-    <td>Ram Upgrades PC & Laptops</td>
-    <td>$200 - 500</td>
-    
-  </tr>
-  <tr>
-    <td>Laptop Repairs</td>
-    <td>$150 - 600</td>
-    
-  </tr>
-  <tr>
-    <td>Home Security Systems</td>
-    <td>$500 - 1000</td>
-    
-  </tr>
-  <tr>
-    <td>Tablet Repair</td>
-    <td>$100 - 250</td>
+
    
-  </tr>
-  <tr>
-    <td>Home Theater Systems</td>
-    <td>$250 - 1500</td>
-    
-  </tr>
-  <tr>
-    <td>PC Build Support</td>
-    <td>$250 - 700</td>
-    
-  </tr>
-</table>
-<div style="padding:70px"  >
-
-<h2 class="w3-center">WeBreakTech Protection</h2>
-
-<table>
-  <tr>
-    <th style="font-weight: bold; font-size: 15px;">Protection Plan</th>
-   <th style="font-weight: bold; font-size: 15px;">Description</th>
-    <th style="font-weight: bold; font-size: 15px;">Total cost</th>
-    
-  </tr>
-  <tr>
-    <td>We Tech Pro</td>
-    <td>Service protection and support for 3 devices /year. Fee charge capped at $200 per device</td>
-   
-    <td>$15 / month</td>
-  </tr>
-  <tr>
-    <td>Tech Basic</td>
-    <td>Service protection and support for 2 devices /year. Fee charge capped at $200 per device</td>
-    <td>$120 / year</td>
-  </tr>
-  <tr>
-    <td>Tech Premium</td>
-   
-    <td>Service protection and support for 5 devices /year. Fee charge capped at $150 per device and 20% off select fees </td>
-    <td>$240 / year</td>
-  </tr>
-  
-</table>
-
-</body>
-</html>
 
 
+<!-- Work Section -->
+<div class="w3-container" style="padding:128px 16px" id="work">
+  <h3 class="w3-center">OUR WORK</h3>
+  <p class="w3-center w3-large">What we've done for people</p>
 
-  
-      
+  <div class="w3-row-padding" style="margin:64px">
+    <div class="w3-quarter">
+      <img src="images2/phonefix.webp" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Phone Repairs">
+    </div>
+    <div class="w3-quarter">
+      <img src="images2/ram.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Ram Upgrades PC & Laptops">
+    </div>
+    <div class="w3-quarter">
+      <img src="images2/repairman.jpg=ws1280x960" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Laptop Repairs">
+    </div>
+    <div class="w3-quarter">
+      <img src="images2/homesec.webp" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Home Security Systems">
+    </div>
+
+  </div>
+   <div class="w3-row-padding w3-section">
+  <div class="w3-col l3 m6">
+    <img src="images2/tablets-repair (1).webp" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Tablet Repair">
+  </div>
+
+  <div class="w3-col l3 m6">
+    <img src="images2/cameras.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Camera Services">
+  </div>
+
+  <div class="w3-col l3 m6">
+    <img src="images2/hometheather.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Home Theater Systems">
+  </div>
+
+  <div class="w3-col l3 m6">
+    <img src="images2/consoles.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Console Services">
+  </div>
+</div>
+
+ 
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+  <div class="w3-container" style="padding:128px 20px" id="about">
+  <h3>Other Services Include</h3>
+
+  <div style="display: flex; align-items: flex-start; gap: 100px;">
+    <ol style="font-size:25px;">
+      <li>Server Backups</li>
+      <li>Storage Upgrades</li>
+      <li>Firewall Setup</li>
+      <li>Smart Security Systems</li>
+      <li>Software Installation</li>
+      <li>Virus Removal</li>
+      <li>Data Recovery</li>
+    </ol>
+
+    <img src="images2/repaircomputer.jpg" style="width:60%; margin-top:32px;">
+  </div>
+</div>
+
+
 
 <!-- Contact Section -->
-<div class="w3-container " style="padding:128px 16px" id="contact">
+<div class="w3-container" style="padding:128px 16px; margin-top: 100px;" id="contact">
   <h3 class="w3-center">CONTACT</h3>
   <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
-  <div style="margin-top:48px ;" >     
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-center"></i> Rhode Island, US</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-center"></i> Phone: +401-###-####</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-center"></i> Email: Webreaktech@mail.com</p>
+  <div style="margin-top:48px">    
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-center"></i> Rhode Island, US</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-center"></i> Phone: +00 151515</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-center"></i> Email: Webreaktech@mail.com</p>
 
     <br>
     <form action="/action_page.php" target="_blank">
@@ -214,7 +208,7 @@ tr:nth-child(even) {
     
 
 <!-- Footer -->
-<footer class="w3-center w3-padding-64" style="background-color: rgb(100, 149, 177);">
+<footer class="w3-center w3-blue w3-padding-64">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
